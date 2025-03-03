@@ -1,0 +1,374 @@
+```html
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ZITROSTYLE VNZLA - Tu Estilo Personalizado</title>
+  <style>
+    /* Reset básico */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    /* Estilos generales */
+    body {
+      font-family: 'Poppins', Arial, sans-serif;
+      background-color: #f9fafb;
+      color: #374151;
+      line-height: 1.6;
+    }
+
+    header {
+      background: linear-gradient(135deg, #1e40af, #3b82f6);
+      color: white;
+      text-align: center;
+      padding: 30px 20px;
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+
+    header p {
+      font-size: 1.2rem;
+      font-weight: 400;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    section {
+      margin-bottom: 40px;
+    }
+
+    h2 {
+      font-size: 2rem;
+      color: #1e40af;
+      text-align: center;
+      margin-bottom: 20px;
+      position: relative;
+    }
+
+    h2::after {
+      content: '';
+      display: block;
+      width: 60px;
+      height: 4px;
+      background: #3b82f6;
+      margin: 10px auto 0;
+      border-radius: 5px;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    ul li {
+      background: #fff;
+      margin: 10px 0;
+      padding: 15px;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    ul li:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+    }
+
+    ul li span {
+      font-weight: bold;
+      color: #1e40af;
+    }
+
+    /* Formulario de pedido */
+    .pedido-form {
+      background: #fff;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    .pedido-form h3 {
+      text-align: center;
+      color: #1e40af;
+      font-size: 1.8rem;
+      margin-bottom: 20px;
+    }
+
+    .pedido-form label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: 600;
+      color: #475569;
+    }
+
+    .pedido-form input,
+    .pedido-form textarea,
+    .pedido-form select {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 15px;
+      border: 1px solid #d1d5db;
+      border-radius: 8px;
+      font-size: 1rem;
+      transition: border-color 0.3s ease;
+    }
+
+    .pedido-form input:focus,
+    .pedido-form textarea:focus,
+    .pedido-form select:focus {
+      border-color: #3b82f6;
+      outline: none;
+      box-shadow: 0 0 5px rgba(59, 130, 246, 0.5);
+    }
+
+    .pedido-item {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+      margin-bottom: 15px;
+    }
+
+    .pedido-item select,
+    .pedido-item input {
+      flex: 1;
+    }
+
+    .pedido-item button {
+      background: #ef4444;
+      color: white;
+      border: none;
+      padding: 10px;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .pedido-item button:hover {
+      background: #b91c1c;
+    }
+
+    .pedido-form button[type="submit"],
+    #agregarProducto {
+      display: block;
+      width: 100%;
+      padding: 12px;
+      background: #1e40af;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .pedido-form button[type="submit"]:hover,
+    #agregarProducto:hover {
+      background: #1e3a8a;
+    }
+
+    /* Contacto */
+    .contact {
+      text-align: center;
+    }
+
+    .contact a {
+      display: inline-block;
+      margin: 10px;
+      padding: 12px 20px;
+      background: #3b82f6;
+      color: white;
+      text-decoration: none;
+      border-radius: 8px;
+      font-size: 1rem;
+      transition: background 0.3s ease;
+    }
+
+    .contact a:hover {
+      background: #1e40af;
+    }
+
+    /* Footer */
+    footer {
+      background: #1e293b;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+    }
+
+    footer p {
+      font-size: 0.9rem;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 2rem;
+      }
+
+      h2 {
+        font-size: 1.5rem;
+      }
+
+      .pedido-item {
+        flex-direction: column;
+      }
+
+      .pedido-item select,
+      .pedido-item input {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>✨ ZITROSTYLE VNZLA ✨</h1>
+    <p>Tu Estilo Personalizado</p>
+  </header>
+  <div class="container">
+    <section>
+      <h2>Ropa Personalizada</h2>
+      <ul>
+        <li><span>Franelas de algodón con DTF:</span> Desde $13 (Oversize $14.5)</li>
+        <li><span>Franelas sublimadas:</span> Desde $6</li>
+        <li><span>Uniformes:</span> Desde $8</li>
+        <li><span>Bodys de bebé:</span> Precio bajo consulta</li>
+        <li><span>Chaquetas:</span> Desde $20</li>
+        <li><span>Camisetas deportivas:</span> Desde $14</li>
+        <li><span>Suéteres:</span> Desde $15</li>
+      </ul>
+    </section>
+    <section>
+      <h2>Accesorios Personalizados</h2>
+      <ul>
+        <li><span>Gorras:</span> Desde $7</li>
+        <li><span>Stickers:</span> ¡Cotiza tu diseño!</li>
+        <li><span>Polaroids:</span> Desde $1</li>
+      </ul>
+    </section>
+    <section>
+      <h2>Publicidad y Decoración</h2>
+      <ul>
+        <li><span>Pendones:</span> Desde $10</li>
+        <li><span>Afiches:</span> Desde $5</li>
+      </ul>
+    </section>
+    <section class="pedido-form">
+      <h3>Haz tu Pedido</h3>
+      <form id="pedidoForm">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" required placeholder="Tu nombre">
+
+        <div id="productosContainer">
+          <div class="pedido-item">
+            <select name="producto[]" required>
+              <option value="">Selecciona un producto</option>
+              <option value="Franelas de algodón con DTF">Franelas de algodón con DTF</option>
+              <option value="Franelas sublimadas">Franelas sublimadas</option>
+              <option value="Uniformes">Uniformes</option>
+              <option value="Bodys de bebé">Bodys de bebé</option>
+              <option value="Chaquetas">Chaquetas</option>
+              <option value="Camisetas deportivas">Camisetas deportivas</option>
+              <option value="Suéteres">Suéteres</option>
+              <option value="Gorras">Gorras</option>
+              <option value="Stickers">Stickers</option>
+              <option value="Polaroids">Polaroids</option>
+              <option value="Pendones">Pendones</option>
+              <option value="Afiches">Afiches</option>
+            </select>
+            <input type="number" name="cantidad[]" min="1" required placeholder="Cantidad">
+            <button type="button" onclick="eliminarProducto(this)">Eliminar</button>
+          </div>
+        </div>
+
+        <button type="button" id="agregarProducto">Agregar Producto</button>
+
+        <label for="descripcion">Descripción del diseño:</label>
+        <textarea id="descripcion" name="descripcion" rows="4" required placeholder="Describe tu idea"></textarea>
+        <button type="submit">Enviar Pedido por WhatsApp</button>
+      </form>
+    </section>
+    <section class="contact">
+      <h2>¿Tienes una idea? ¡La hacemos realidad!</h2>
+      <p>Danos tu idea y te ayudamos a crear la prenda o producto perfecto para ti.</p>
+      <a href="https://wa.me/584124434157" target="_blank">WhatsApp</a>
+      <a href="https://www.instagram.com/zitrostylevnzla/" target="_blank">Instagram</a>
+    </section>
+  </div>
+  <footer>
+    <p>&copy; 2023 ZITROSTYLE VNZLA. Todos los derechos reservados.</p>
+  </footer>
+  <script>
+    document.getElementById('agregarProducto').addEventListener('click', function() {
+      const container = document.getElementById('productosContainer');
+      const newItem = document.createElement('div');
+      newItem.classList.add('pedido-item');
+      newItem.innerHTML = `
+        <select name="producto[]" required>
+          <option value="">Selecciona un producto</option>
+          <option value="Franelas de algodón con DTF">Franelas de algodón con DTF</option>
+          <option value="Franelas sublimadas">Franelas sublimadas</option>
+          <option value="Uniformes">Uniformes</option>
+          <option value="Bodys de bebé">Bodys de bebé</option>
+          <option value="Chaquetas">Chaquetas</option>
+          <option value="Camisetas deportivas">Camisetas deportivas</option>
+          <option value="Suéteres">Suéteres</option>
+          <option value="Gorras">Gorras</option>
+          <option value="Stickers">Stickers</option>
+          <option value="Polaroids">Polaroids</option>
+          <option value="Pendones">Pendones</option>
+          <option value="Afiches">Afiches</option>
+        </select>
+        <input type="number" name="cantidad[]" min="1" required placeholder="Cantidad">
+        <button type="button" onclick="eliminarProducto(this)">Eliminar</button>
+      `;
+      container.appendChild(newItem);
+    });
+
+    function eliminarProducto(button) {
+      const item = button.parentElement;
+      item.remove();
+    }
+
+    document.getElementById('pedidoForm').addEventListener('submit', function(event) {
+      event.preventDefault();
+      const nombre = document.getElementById('nombre').value;
+      const productos = Array.from(document.getElementsByName('producto[]')).map(select => select.value);
+      const cantidades = Array.from(document.getElementsByName('cantidad[]')).map(input => input.value);
+      const descripcion = document.getElementById('descripcion').value;
+
+      if (!nombre || productos.some(p => !p) || cantidades.some(c => !c) || !descripcion) {
+        alert('Por favor, completa todos los campos.');
+        return;
+      }
+
+      let mensaje = `Hola, quiero hacer un pedido:\n\nNombre: ${nombre}\nProductos:\n`;
+      productos.forEach((producto, index) => {
+        mensaje += `- ${producto} x${cantidades[index]}\n`;
+      });
+      mensaje += `\nDescripción del diseño: ${descripcion}`;
+      const url = `https://wa.me/584124434157?text=${encodeURIComponent(mensaje)}`;
+      window.open(url, '_blank');
+    });
+  </script>
+</body>
+</html>
+```
